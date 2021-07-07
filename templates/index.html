@@ -49,13 +49,13 @@
   let lastDate = Date.now()/1000;
 
   async function updateLast() {
-   let response = await fetch('http://127.0.0.1:5000/api/get-time');
+   let response = await fetch('/api/get-time');
    let jsonData = await response.json();
    lastDate = await jsonData;
   }
 
   async function resetLast() {
-    await fetch('http://127.0.0.1:5000/api/reset-time');
+    await fetch('/api/reset-time');
     await updateLast()
   }
 
