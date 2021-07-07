@@ -1,1 +1,1 @@
-web: gunicorn last-quasi:app
+web: gunicorn app:app
